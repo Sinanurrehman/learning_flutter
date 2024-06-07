@@ -14,9 +14,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: GoogleFonts.lato().fontFamily),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.lightBlue,
+        fontFamily: GoogleFonts.lato().fontFamily,
+        appBarTheme: AppBarTheme(
+            color: Colors.white,
+            elevation: 0.0,
+            iconTheme: IconThemeData(color: Colors.black),
+            toolbarTextStyle: Theme.of(context).textTheme.headlineMedium,
+            titleTextStyle: Theme.of(context).textTheme.headlineSmall),
+      ),
+      debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => LoginPage(),
+        "/": (context) => HomePage(),
         MyRouts.homeRoute: (context) => HomePage(),
         MyRouts.loginRoute: (context) => LoginPage(),
       },
