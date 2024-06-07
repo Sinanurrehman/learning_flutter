@@ -1,4 +1,5 @@
 import 'package:application_1/utils/routs.dart';
+import 'package:application_1/widhget/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:application_1/pages/home_page.dart';
 import 'package:application_1/pages/login_page.dart';
@@ -15,16 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        appBarTheme: AppBarTheme(
-            color: Colors.white,
-            elevation: 0.0,
-            iconTheme: IconThemeData(color: Colors.black),
-            toolbarTextStyle: Theme.of(context).textTheme.headlineMedium,
-            titleTextStyle: Theme.of(context).textTheme.headlineSmall),
-      ),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => HomePage(),
