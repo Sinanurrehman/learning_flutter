@@ -1,5 +1,5 @@
 import 'package:application_1/utils/routs.dart';
-import 'package:application_1/widhget/themes.dart';
+import 'package:application_1/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:application_1/pages/home_page.dart';
 import 'package:application_1/pages/login_page.dart';
